@@ -4,7 +4,7 @@ export function Hero() {
       id="heroId"
       className="relative overflow-hidden bg-[#1a9959] mt-1 mx-6 rounded-xl mb-24"
     >
-      <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-20 gap-10 z-30 xxs:items-center xxs:flex xxs:flex-col lg:flex lg:flex-row lg:items-normal lg:justify-normal">
+      <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:px-8 lg:py-20 gap-10 z-30 xxs:items-center xxs:flex xxs:flex-col lg:items-normal lg:justify-normal lg:flex lg:flex-row flex-col ">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <h1 className="mt-10 xxs:text-4xl md:text-5xl font-bold tracking-tight text-pageColors-1 xxs:text-center lg:text-left xxs:mt-20 lg:mt-0">
             Villámgyors weboldalak, gondtalan vállalkozóélet
@@ -29,7 +29,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="xl:mt-0 lg:mt-20 xxs:max-w-lg lg:max-w-2xl">
+        <div className="xl:mt-0 xxs:max-w-lg lg:max-w-2xl">
           <img
             className="rounded-3xl"
             width={1000}

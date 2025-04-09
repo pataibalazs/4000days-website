@@ -33,7 +33,7 @@ export default function Navbar() {
           </div>
 
           {/* Centered desktop nav */}
-          <div className="hidden sm:flex sm:space-x-8 mt-2">
+          <div className="hidden md:flex md:space-x-8 mt-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button on the right */}
-          <div className="absolute right-0 flex sm:hidden">
+          <div className="absolute right-0 flex md:hidden">
             <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#1a9959]">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="block h-6 w-6 data-[headlessui-state=open]:hidden" />
@@ -57,8 +57,8 @@ export default function Navbar() {
       </div>
 
       {/* Mobile nav items */}
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-4 pt-2 pb-4">
+      <DisclosurePanel className="md:hidden">
+        <div className="flex flex-col items-end space-y-1 px-4 pt-2 pb-4">
           {navItems.map((item) => (
             <DisclosureButton
               key={item.name}

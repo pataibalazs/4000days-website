@@ -19,7 +19,7 @@ export default function Footer() {
           className="-mb-6 columns-2 flex justify-center space-x-10 sm:space-x-12"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.name} className="pb-6 hidden sm:flex">
               <Link
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"

@@ -94,7 +94,7 @@ export default function Pricing() {
               <span
                 className={classNames(
                   tier.featured ? "text-white" : "text-gray-900",
-                  "text-4xl font-semibold tracking-tight"
+                  "text-2xl xs:text-3xl sm:text-4xl font-semibold tracking-tight "
                 )}
               >
                 {tier.priceMonthly}

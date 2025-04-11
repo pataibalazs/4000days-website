@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const navigation = {
   main: [
-    { name: "Főoldal", href: "/" },
-    { name: "Szolgáltatások", href: "/" },
-    { name: "Árazás", href: "/teams" },
-    { name: "Referenciák", href: "/contact" },
-    { name: "Kontakt", href: "/contact1" },
+    { name: "Főoldal", href: "#" },
+    { name: "Szolgáltatások", href: "#features" },
+    { name: "Árazás", href: "#pricing" },
+    { name: "Referenciák", href: "#references" },
+    { name: "Kontakt", href: "#contact" },
   ],
 };
 
@@ -31,7 +31,7 @@ export default function Footer() {
         </nav>
         <div className="flex justify-center space-x-10">
           <div className="flex items-center flex-none">
-            <Link href="/" className="no-underline mt-5">
+            <Link href="#" className="no-underline mt-5">
               <img
                 src="/logo.png"
                 alt="DECKBAE Logo"

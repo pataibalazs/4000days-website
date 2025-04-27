@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Hero } from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Pricing from "@/components/Pricing";
+import OurGoal from "@/components/OurGoal";
 import Contact from "@/components/Contact";
+import Team from "@/components/Team";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-import References from "@/components/References";
 
 export default function Home() {
   return (
@@ -17,11 +17,11 @@ export default function Home() {
       <div id="features">
         <Features />
       </div>
-      <div id="pricing">
-        <Pricing />
+      <div id="our-goal">
+        <OurGoal />
       </div>
-      <div id="references">
-        <References />
+      <div id="team">
+        <Team />
       </div>
       <div id="contact">
         <Contact />

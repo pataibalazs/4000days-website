@@ -8,16 +8,15 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navItems = [
-  { name: "Főoldal", href: "#" },
-  { name: "Szolgáltatások", href: "#features" },
-  { name: "Árazás", href: "#pricing" },
-  { name: "Referenciák", href: "#references" },
-  { name: "Kontakt", href: "#contact" },
+  { name: "Features", href: "#features" },
+  { name: "Our goal", href: "#our-goal" },
+  { name: "Team", href: "#team" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white mb-4">
+    <Disclosure as="nav" className="bg-[#073b3a] py-2 mb-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main navbar layout */}
         <div className="relative flex h-20 items-center justify-center">
@@ -25,9 +24,9 @@ export default function Navbar() {
           <div className="absolute left-0 flex items-center">
             <a href="/">
               <img
-                src="/logo.png"
+                src="/without_bg.png"
                 alt="Your Company"
-                className="h-16 w-auto transition ease-in-out hover:scale-110"
+                className="h-14 w-auto transition ease-in-out hover:scale-120"
               />
             </a>
           </div>
@@ -38,7 +37,7 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-md font-medium text-black hover:text-[#1a9959]"
+                className="text-xl font-medium text-white hover:text-[#a3d9a5]"
               >
                 {item.name}
               </a>
@@ -64,7 +63,7 @@ export default function Navbar() {
               key={item.name}
               as="a"
               href={item.href}
-              className="block text-base font-medium text-gray-700 hover:text-[#1a9959] hover:bg-gray-100 rounded-md px-3 py-2 transition"
+              className="block text-base font-medium text-white hover:text-[#1a9959] hover:bg-gray-100 rounded-md px-3 py-2 transition"
             >
               {item.name}
             </DisclosureButton>

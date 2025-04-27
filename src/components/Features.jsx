@@ -1,48 +1,42 @@
 import {
-  HomeIcon,
-  BoltIcon,
-  LightBulbIcon,
-  GlobeEuropeAfricaIcon,
-  WalletIcon,
-  ShieldCheckIcon,
+  EyeSlashIcon,
+  DevicePhoneMobileIcon,
+  ArrowPathIcon,
+  AdjustmentsHorizontalIcon,
+  CloudIcon,
+  SwatchIcon,
 } from "@heroicons/react/24/solid";
 
 const features = [
   {
-    name: "Foglalkozz azzal, ami igazán számít!",
-    description:
-      "A Lab404 havidíjas szolgáltatásként gondoskodik weboldalad karbantartásáról és fejlesztéséről, így te a vállalkozásodra koncentrálhatsz.",
-    icon: HomeIcon,
+    name: "Blur",
+    icon: EyeSlashIcon,
+    imgClass: "rounded-lg blur-sm",
   },
   {
-    name: "Villámgyors kivitelezés",
-    description:
-      "Akár 1-2 héten belül elkészítjük a teljes weboldalt, hogy minél előbb online lehess – hatékony és megbízható munkavégzéssel.",
-    icon: BoltIcon,
+    name: "Vibrate",
+    icon: DevicePhoneMobileIcon,
+    imgClass: "rounded-lg contrast-125",
   },
   {
-    name: "Modern technológia",
-    description:
-      "Next.js-alapú megoldásaink nemcsak gyorsak, de kiváló SEO-teljesítményt is nyújtanak a jobb Google-pozíciókért.",
-    icon: LightBulbIcon,
+    name: "Wobble",
+    icon: ArrowPathIcon,
+    imgClass: "rounded-lg sepia",
   },
   {
-    name: "Nemzetközi minőség",
-    description:
-      "Külföldi piacokra is alkalmas, professzionális weboldalakat készítünk – versenyképes megjelenéssel és stabil háttérrel.",
-    icon: GlobeEuropeAfricaIcon, // Jobban illik a “nemzetközi”-hez
+    name: "Grayscale",
+    icon: AdjustmentsHorizontalIcon,
+    imgClass: "rounded-lg grayscale",
   },
   {
-    name: "Megfizethető árak",
-    description:
-      "Minőségi weboldal kisvállalkozóknak is elérhető áron – alacsony fenntartási költségek és átlátható díjszabás.",
-    icon: WalletIcon, // Jobban illik a “költséghatékony”-hoz
+    name: "Breathe",
+    icon: CloudIcon,
+    imgClass: "rounded-lg brightness-75",
   },
   {
-    name: "Stabil háttér, tapasztalt csapat",
-    description:
-      "Több éves tapasztalat, precizitás és ügyfélközpontúság jellemzi munkánkat – nálunk biztos kezekben van a projekted.",
-    icon: ShieldCheckIcon, // Jobban kifejezi a szakértelem és megbízhatóság érzetét
+    name: "Color shift",
+    icon: SwatchIcon,
+    imgClass: "rounded-lg blur-none",
   },
 ];
 
@@ -51,48 +45,67 @@ export default function Features() {
     <div className="bg-white py-12 sm:pt-6 pb-32 sm:pb-32 px-6">
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base/7 font-bold text-[#1a9959]">
-            Szolgáltatások
-          </h2>
+          <h2 className="text-base/7 font-bold text-[#a3d9a5]">Features</h2>
           <p className="inline text-4xl font-semibold tracking-tight text-gray-900">
-            Készen állsz az új weboldaladra?
+            Take back your power!
           </p>
           <p className="mt-6 text-lg/8 text-gray-600 text-inline">
-            A lab404 csapata teljes körű webfejlesztési szolgáltatásokat nyújt
-            modern vállalkozások számára. Gyors, megbízható és folyamatosan
-            fejleszthető digitális megoldások – egy helyen.
+            Developers spend months making social media as addictive and
+            immersive as possible — but what if it all started to...
           </p>
-        </div>
-      </div>
-      <div className="relative overflow-hidden pt-5 sm:pt-10">
-        <div className="sm:mx-auto sm:max-w-7xl sm:px-6 lg:px-8">
-          <img
-            alt="App screenshot"
-            src="/1girl.jpg"
-            width={2432}
-            height={1442}
-            className="mb-[-5%] rounded-xl ring-1 shadow-2xl ring-gray-900/10"
-          />
-          <div aria-hidden="true" className="relative">
-            <div className="absolute -inset-x-20 bottom-0 bg-linear-to-t from-white pt-[7%]" />
-          </div>
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-7xl sm:px-6 sm:mt-10 md:mt-14 lg:px-8">
         <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <feature.icon
-                  aria-hidden="true"
-                  className="absolute top-1 left-1 size-5 text-[#1a9959]"
-                />
-                {feature.name}
-              </dt>
-              <dd className="mt-2">{feature.description}</dd>
-            </div>
-          ))}
+          {features.map((feature) => {
+            // Extra classes based on feature name
+            let extraClass = "";
+            if (feature.name === "Wobble") extraClass = "animate-wobble";
+            if (feature.name === "Vibrate") extraClass = "animate-vibrate";
+            if (feature.name === "Breathe") extraClass = "animate-breathe";
+            if (feature.name === "Color shift")
+              extraClass = "animate-colorshift";
+
+            return (
+              <div key={feature.name} className="relative pl-9">
+                <dt className="font-semibold text-gray-900 flex items-center justify-center gap-2">
+                  <feature.icon
+                    aria-hidden="true"
+                    className="size-5 text-[#a3d9a5]"
+                  />
+                  {feature.name}
+                </dt>
+                <dd className="mt-4">
+                  <img
+                    src="/ig_pic.png"
+                    alt="Feature"
+                    className={`w-full h-80 object-cover ${feature.imgClass} ${extraClass}`}
+                  />
+                </dd>
+              </div>
+            );
+          })}
         </dl>
+        <div className="mt-10 mx-auto max-w-3xl rounded-xl bg-[#f5fdf8] border border-[#1a9959]/20 shadow-lg px-8 py-8 text-center">
+          <p className="text-2xl font-bold text-[#1a9959] mb-2">
+            More effects are waiting for you on the extension.
+          </p>
+          <p className="text-lg text-gray-800 mb-1">
+            And there's even more! Our effects work on every site.
+          </p>
+          <p className="text-lg text-gray-800 mb-1">
+            Need a break? Use the{" "}
+            <span className="font-semibold text-[#1a9959]">cheat button</span>{" "}
+            for 10 minutes of distraction-free browsing.
+            <br />
+            <span className="text-sm text-[#1a9959] font-semibold">
+              (You can use it once per day!)
+            </span>
+          </p>
+          <p className="text-base text-gray-500 italic mt-2">
+            The problem isn’t usage — it’s overusage. :)
+          </p>
+        </div>
       </div>
     </div>
   );

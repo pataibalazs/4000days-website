@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <div className="px-4 sm:px-8 mx-auto w-full xl:max-w-[100vw] lg:max-w-[90vw] flex flex-col lg:flex-row items-center justify-center">
+    <div className="px-4 sm:px-8 mx-auto w-full xl:max-w-[100vw] lg:max-w-4xl flex flex-col lg:flex-row items-center justify-center">
       <div
         id="heroId"
         className="relative overflow-hidden bg-white rounded-xl mb-12 sm:mb-24 max-w-7xl mx-auto w-full xl:py-8 border-[#073b3a] border-4 shadow-2xl"
@@ -24,16 +24,16 @@ export function Hero() {
                 We have the solution!
               </span>
             </p>
-            <div className="mt-8 sm:mt-10 flex flex-col xs:flex-row items-center gap-y-4 xs:gap-y-0 gap-x-4 sm:gap-x-6 justify-center sm:justify-normal">
+            <div className="mt-8 sm:mt-10 flex flex-col xl:flex-row items-center gap-y-4 xl:gap-y-0 gap-x-4 xl:gap-x-6 justify-center lg:justify-center xl:justify-normal">
               <a
                 href="#contact"
-                className="w-full xs:w-auto rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-sm xs:text-md sm:text-lg lg:text-xl font-semibold bg-[#073b3a] text-white shadow-sm transition ease-in-out hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
+                className="w-full xl:w-auto rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-lg lg:text-xl font-semibold bg-[#073b3a] text-white shadow-sm transition ease-in-out hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
               >
                 Download it!
               </a>
               <a
-                href="#pricing"
-                className="w-full xs:w-auto rounded-xl bg-[#a3d9a5] px-6 sm:px-8 py-2.5 sm:py-3 text-sm xs:text-md sm:text-lg lg:text-xl font-semibold text-[#073b3a] shadow-sm transition ease-in-out hover:bg-[#a3d9a5] hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
+                href="#features"
+                className="w-full xl:w-auto rounded-xl bg-[#a3d9a5] px-6 sm:px-8 py-2.5 sm:py-3 text-lg lg:text-xl font-semibold text-[#073b3a] shadow-sm transition ease-in-out hover:bg-[#a3d9a5] hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
               >
                 Learn More
               </a>

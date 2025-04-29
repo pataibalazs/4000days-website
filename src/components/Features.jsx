@@ -46,7 +46,7 @@ export default function Features() {
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-base/7 font-bold text-[#a3d9a5]">Features</h2>
-          <p className="inline text-4xl font-semibold tracking-tight text-gray-900">
+          <p className="inline text-4xl font-semibold tracking-tight text-[#073b3a]">
             Take back your power!
           </p>
           <p className="mt-6 text-lg/8 text-gray-600 text-inline">
@@ -71,7 +71,7 @@ export default function Features() {
                 <dt className="font-semibold text-gray-900 flex items-center justify-center gap-2">
                   <feature.icon
                     aria-hidden="true"
-                    className="size-5 text-[#a3d9a5]"
+                    className="size-6 text-[#073b3a]"
                   />
                   {feature.name}
                 </dt>

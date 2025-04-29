@@ -23,9 +23,9 @@ export default function OurGoal() {
 
       <div className="mx-auto max-w-4xl">
         <h2 className="text-base/7 font-bold text-[#a3d9a5] text-center">
-          Time Usage
+          Our Goal
         </h2>
-        <p className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 text-center">
+        <p className="mt-2 text-4xl font-semibold tracking-tight text-[#073b3a] text-center">
           How does 70% of your free time disappear?
         </p>
 
@@ -34,26 +34,23 @@ export default function OurGoal() {
           If you sleep 8 hours, work 8.5 hours, commute 1 hour, and spend 2
           hours on daily tasks, you have about{" "}
           <span className="font-bold text-[#1a9959]">4.5 hours</span> of free
-          time each day.
-          <br />
-          Of this, <span className="font-bold text-[#1a9959]">
-            3.2 hours
-          </span>{" "}
-          is typically spent on social media — that's
+          time each day. Of this,{" "}
+          <span className="font-bold text-[#1a9959]">3.2 hours</span> is
+          typically spent on social media — <br></br> that's
           <span className="font-bold text-[#1a9959]"> more than 70%</span> of
           your free time.
         </p>
 
         {/* Balls legend */}
-        <div className="mt-6 flex items-center gap-6 text-base font-medium justify-center">
+        <div className="mt-6 flex flex-col xs:flex-row items-center gap-4 xs:gap-6 text-base font-medium justify-center">
           <div className="flex items-center gap-2">
-            <span className="inline-block w-6 h-6 rounded-full bg-[#a3d9a5] border-2 border-[#073b3a] shadow"></span>
+            <span className="inline-block w-6 h-6 rounded-full border-2 border-[#073b3a] shadow bg-white"></span>
             <span className="text-[#073b3a] font-bold">
               = time spent on social media
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-6 h-6 rounded-full border-2 border-[#073b3a] bg-white"></span>
+          <div className="flex items-center gap-2 mt-2 xs:mt-0">
+            <span className="inline-block w-6 h-6 rounded-full border-2 border-[#073b3a] bg-[#a3d9a5]"></span>
             <span className="text-[#073b3a] font-bold">= other free time</span>
           </div>
         </div>
@@ -61,7 +58,7 @@ export default function OurGoal() {
         {/* Balls visualization - vertical layout */}
         <div className="mt-8 flex flex-col items-center gap-2">
           {Array.from({ length: 10 }).map((_, col) => (
-            <div key={col} className="flex flex-row gap-4">
+            <div key={col} className="flex flex-row gap-2 sm:gap-4">
               {Array.from({ length: 10 }).map((_, row) => {
                 const idx = col * 10 + row;
                 return (
@@ -69,8 +66,8 @@ export default function OurGoal() {
                     key={row}
                     className={
                       idx < 71
-                        ? "inline-block w-8 h-8 rounded-full bg-[#a3d9a5] border-2 border-[#073b3a] shadow"
-                        : "inline-block w-8 h-8 rounded-full border-2 border-[#073b3a] bg-white"
+                        ? "inline-block w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-[#073b3a] bg-white"
+                        : "inline-block w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#a3d9a5] border-2 border-[#073b3a] shadow"
                     }
                     style={{ margin: "1px" }}
                   />

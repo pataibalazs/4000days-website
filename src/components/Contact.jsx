@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="isolate bg-white px-6 sm:pt-6 pb-10 sm:pb-20 lg:px-8 mt-20">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-base/7 font-bold text-[#a3d9a5]">Contact</h2>
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl mb-6">
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-[#073b3a] sm:text-5xl mb-6">
           Write to us!
         </h2>
         <p className="mt-2 text-lg/8 text-gray-600">
@@ -36,7 +36,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-[#073b3a]"
               >
                 Email
               </label>
@@ -47,7 +47,7 @@ export default function Contact() {
                   type="email"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#1a9959]"
+                  className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#a3d9a5]"
                 />
                 <ValidationError
                   prefix="Email"
@@ -62,7 +62,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-[#073b3a]"
               >
                 Message
               </label>
@@ -72,7 +72,7 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   required
-                  className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#1a9959]"
+                  className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#a3d9a5]"
                   placeholder="What would you like to tell us?"
                 />
                 <ValidationError
@@ -88,9 +88,9 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="block w-full rounded-md bg-[#073b3a] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-[#16874d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1a9959] disabled:opacity-70 disabled:cursor-not-allowed"
+                className="block w-full rounded-md bg-[#073b3a] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-[#073b3a] hover:scale-105 transition-transform ease-in-ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3d9a5] disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {state.submitting ? "Küldés..." : "Küldés"}
+                {state.submitting ? "Send..." : "Send"}
               </button>
             </div>
           </div>

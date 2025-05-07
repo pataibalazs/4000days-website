@@ -17,7 +17,7 @@ export function Hero() {
               <span className="font-bold text-[#1a9959]">3.2 hours</span> every
               day? Imagine what you could achieve if you reduced it to just{" "}
               <span className="font-bold text-[#1a9959]">30 minutes</span> a
-              day. from that each day.
+              day.
             </p>
             <p className="mt-4 sm:mt-6 text-base sm:text-2xl leading-7 sm:leading-8 xl:mr-10 font-medium text-[#073b3a]">
               <span className="font-bold text-[#1a9959]">

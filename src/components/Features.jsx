@@ -55,37 +55,37 @@ export default function Features() {
           </p>
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl sm:px-6 sm:mt-10 md:mt-14 lg:px-8">
-        <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          {features.map((feature) => {
-            // Extra classes based on feature name
-            let extraClass = "";
-            if (feature.name === "Wobble") extraClass = "animate-wobble";
-            if (feature.name === "Vibrate") extraClass = "animate-vibrate";
-            if (feature.name === "Breathe") extraClass = "animate-breathe";
-            if (feature.name === "Color shift")
-              extraClass = "animate-colorshift";
+        <div className="mx-auto mt-10 max-w-7xl sm:px-6 sm:mt-10 md:mt-14 lg:px-8">
+          <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            {features.map((feature) => {
+              // Extra classes based on feature name
+              let extraClass = "";
+              if (feature.name === "Wobble") extraClass = "animate-wobble";
+              if (feature.name === "Vibrate") extraClass = "animate-vibrate";
+              if (feature.name === "Breathe") extraClass = "animate-breathe";
+              if (feature.name === "Color shift")
+                extraClass = "animate-colorshift";
 
-            return (
-              <div key={feature.name} className="relative pl-9">
-                <dt className="font-semibold text-gray-900 flex items-center justify-center gap-2">
-                  <feature.icon
-                    aria-hidden="true"
-                    className="size-6 text-[#073b3a]"
-                  />
-                  {feature.name}
-                </dt>
-                <dd className="mt-4">
-                  <img
-                    src="/ig_pic.png"
-                    alt="Feature"
-                    className={`w-full h-80 object-cover ${feature.imgClass} ${extraClass}`}
-                  />
-                </dd>
-              </div>
-            );
-          })}
-        </dl>
+              return (
+                <div key={feature.name} className="relative sm:pl-9">
+                  <dt className="font-semibold text-gray-900 flex items-center justify-center gap-2">
+                    <feature.icon
+                      aria-hidden="true"
+                      className="size-6 text-[#073b3a]"
+                    />
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-4">
+                    <img
+                      src="/ig_pic.png"
+                      alt="Feature"
+                      className={`w-full h-80 object-cover ${feature.imgClass} ${extraClass}`}
+                    />
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
         <div className="mt-10 mx-auto max-w-3xl rounded-xl bg-[#f5fdf8] border border-[#1a9959]/20 shadow-lg px-8 py-8 text-center">
           <p className="text-2xl font-bold text-[#1a9959] mb-2">
             More effects are waiting for you on the extension.

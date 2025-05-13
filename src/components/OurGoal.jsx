@@ -34,7 +34,7 @@ export default function OurGoal() {
           If you sleep 8 hours, work 8.5 hours, commute 1 hour, and spend 2
           hours on daily tasks, you have about{" "}
           <span className="font-bold text-[#1a9959]">4.5 hours</span> of free
-          time each day. Of this,{" "}
+          time each day. Out of this,{" "}
           <span className="font-bold text-[#1a9959]">3.2 hours</span> is
           typically spent on social media — <br></br> that's
           <span className="font-bold text-[#1a9959]"> more than 70%</span> of

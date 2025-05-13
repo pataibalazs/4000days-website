@@ -46,7 +46,12 @@ export default function Navbar() {
 
           {/* Logo on the right */}
           <div className="absolute right-0 flex items-center hidden md:block">
-            <a href="/">
+            <a
+              href="https://chromewebstore.google.com/detail/4000-days-extension/hkmigjoopgdahhbdlopmcajccgdmlmej"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

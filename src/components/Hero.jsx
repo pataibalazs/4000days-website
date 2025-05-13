@@ -26,7 +26,9 @@ export function Hero() {
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col xl:flex-row items-center gap-y-4 xl:gap-y-0 gap-x-4 xl:gap-x-6 justify-center lg:justify-center xl:justify-normal">
               <a
-                href="#contact"
+                href="https://chromewebstore.google.com/detail/4000-days-extension/hkmigjoopgdahhbdlopmcajccgdmlmej"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full xl:w-auto rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-lg lg:text-xl font-semibold bg-[#073b3a] text-white shadow-sm transition ease-in-out hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
               >
                 Download it!

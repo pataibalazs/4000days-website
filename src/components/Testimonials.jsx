@@ -72,7 +72,7 @@ const UsersSaid = () => (
   <section className="w-full flex flex-col items-center justify-center py-16 bg-white mb-20">
     <div className="mx-auto max-w-2xl text-center mb-10">
       <h2 className="text-base font-bold text-[#a3d9a5]">
-        Our companies told about us
+        Companies told about us
       </h2>
       <p className="text-3xl font-semibold tracking-tight text-[#073b3a] mt-2">
         What companies are saying

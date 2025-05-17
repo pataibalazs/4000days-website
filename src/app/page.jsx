@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import Team from "@/components/Team";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import Roadmap from "@/components/Roadmap";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       </div>
       <div id="our-goal">
         <OurGoal />
+      </div>
+      <div id="roadmap">
+        <Roadmap />
       </div>
       <div id="team">
         <Team />

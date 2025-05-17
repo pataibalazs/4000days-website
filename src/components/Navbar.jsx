@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
 
           {/* Centered desktop nav */}
-          <div className="hidden md:flex md:space-x-8 mt-3">
+          <div className="hidden md:flex md:space-x-7 mt-3">
             {navItems.map((item) => (
               <a
                 key={item.name}

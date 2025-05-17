@@ -6,6 +6,7 @@ import Team from "@/components/Team";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Roadmap from "@/components/Roadmap";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
       </div>
       <div id="roadmap">
         <Roadmap />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
       </div>
       <div id="team">
         <Team />

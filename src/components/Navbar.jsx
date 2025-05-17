@@ -11,6 +11,7 @@ const navItems = [
   { name: "Features", href: "#features" },
   { name: "Our goal", href: "#our-goal" },
   { name: "Roadmap", href: "#roadmap" },
+  { name: "Reviews", href: "#testimonials" },
   { name: "Team", href: "#team" },
   { name: "Contact", href: "#contact" },
 ];

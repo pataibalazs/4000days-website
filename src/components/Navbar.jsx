@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
 
           {/* Centered desktop nav */}
-          <div className="hidden md:flex md:space-x-7 mt-3">
+          <div className="hidden lg:flex md:space-x-9 mt-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -47,7 +47,7 @@ export default function Navbar() {
           </div>
 
           {/* Logo on the right */}
-          <div className="absolute right-0 flex items-center hidden md:block">
+          <div className="absolute right-0 flex items-center hidden lg:block">
             <a
               href="https://chromewebstore.google.com/detail/4000-days-extension/hkmigjoopgdahhbdlopmcajccgdmlmej"
               target="_blank"
@@ -65,7 +65,7 @@ export default function Navbar() {
             </a>
           </div>
           {/* Mobile menu button on the right */}
-          <div className="absolute right-0 flex md:hidden">
+          <div className="absolute right-0 flex lg:hidden">
             <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-[#a3d9a5] hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="block h-6 w-6 data-[headlessui-state=open]:hidden" />

@@ -76,7 +76,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile nav items */}
-      <DisclosurePanel className="md:hidden">
+      <DisclosurePanel className="lg:hidden">
         <div className="flex flex-col items-end space-y-1 px-4 pt-2 pb-4">
           {navItems.map((item) => (
             <DisclosureButton

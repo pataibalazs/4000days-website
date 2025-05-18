@@ -78,7 +78,7 @@ const UsersSaid = () => (
         What companies are saying
       </p>
     </div>
-    <div className="flex flex-col gap-8 md:flex-row md:gap-6 w-full max-w-6xl px-2 sm:px-4">
+    <div className="flex flex-col gap-8 md:flex-row md:gap-6 w-full max-w-6xl px-6 sm:px-4">
       {testimonials.map((t, idx) => (
         <div
           key={idx}

@@ -3,10 +3,12 @@ import Link from "next/link";
 const navigation = {
   main: [
     { name: "Home", href: "#" },
-    { name: "Features", href: "#features" },
-    { name: "Our goal", href: "#our-goal" },
-    { name: "Team", href: "#team" },
-    { name: "Contact", href: "#contact" },
+  { name: "Features", href: "#features" },
+  { name: "Our goal", href: "#our-goal" },
+  { name: "Roadmap", href: "#roadmap" },
+  { name: "Reviews", href: "#testimonials" },
+  { name: "Team", href: "#team" },
+  { name: "Contact", href: "#contact" },
   ],
 };
 

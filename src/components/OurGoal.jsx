@@ -1,10 +1,130 @@
+"use client";
+
 import { CheckIcon } from "@heroicons/react/20/solid";
+import { Pie } from 'react-chartjs-2'; // Pie component can also render doughnut charts
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  Title
+} from 'chart.js';
+
+// Register ChartJS components
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function OurGoal() {
+  const socialMediaTime = 3.2;
+  const otherFreeTime = 1.3;
+  const totalFreeTime = socialMediaTime + otherFreeTime;
+
+  const pieChartData = {
+    // Updated labels
+    labels: ['Time wasted on social media', 'Other Free Time'],
+    datasets: [
+      {
+        label: 'Free Time Allocation',
+        data: [socialMediaTime, otherFreeTime],
+        backgroundColor: [
+          '#FFFFFF', // White for social media
+          '#a3d9a5', // Green for other free time
+        ],
+        borderColor: [
+          '#073b3a', // Dark border for social media slice
+          '#073b3a', // Dark border for other free time slice
+        ],
+        borderWidth: 2,
+        hoverBackgroundColor: [ // Slightly different colors on hover for better feedback
+          '#f0f0f0', // A light grey for white slice hover
+          '#8bcba6', // A slightly darker green for green slice hover
+        ],
+        hoverBorderColor: [
+          '#1a9959', // Accent color for border on hover
+          '#1a9959', // Accent color for border on hover
+        ],
+        hoverBorderWidth: 4, // Thicker border on hover
+        hoverOffset: 15,      // Makes the slice pop out more on hover
+        cutout: '65%',        // Makes this a doughnut chart! Adjust percentage for hole size
+      },
+    ],
+  };
+
+  const pieChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom', // Moved legend to bottom for a different feel
+        labels: {
+          color: '#073b3a',
+          font: {
+            weight: 'bold',
+            size: 14,
+          },
+          padding: 20, // Added padding to legend items
+          usePointStyle: true, // Use point style (circles) for legend items
+          pointStyle: 'circle',
+        }
+      },
+      title: {
+        display: true,
+        text: 'Your Daily Free Time: A Closer Look', // More engaging title
+        color: '#073b3a',
+        font: {
+          size: 20, // Slightly larger title
+          weight: 'bold',
+          family: 'Inter, sans-serif', // Assuming a common sans-serif font
+        },
+        padding: {
+          top: 10,
+          bottom: 25 // More space below title
+        }
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: 'rgba(7, 59, 58, 0.9)', // Dark, slightly transparent background #073b3a
+        titleColor: '#a3d9a5', // Green title in tooltip
+        bodyColor: '#FFFFFF',   // White body text in tooltip
+        borderColor: '#1a9959',
+        borderWidth: 1,
+        padding: 10,
+        cornerRadius: 5,
+        usePointStyle: true,
+        callbacks: {
+          label: function(context) {
+            let label = context.label || ''; // Use the direct label
+            if (label) {
+              label += ': ';
+            }
+            const value = context.parsed;
+            const percentage = ((value / totalFreeTime) * 100).toFixed(1);
+            if (value !== null) {
+              label += value.toFixed(1) + ' hours (' + percentage + '%)';
+            }
+            return label;
+          },
+          // Optional: Customize title in tooltip if needed
+          // title: function(tooltipItems) {
+          //   return 'Breakdown';
+          // }
+        }
+      }
+    },
+    animation: { // Enhanced animation
+      animateRotate: true,
+      animateScale: true,
+      duration: 1200, // Duration of animation in milliseconds
+      easing: 'easeInOutQuart' // Easing function for a smoother effect
+    },
+    layout: {
+        padding: 10 // Add some padding around the chart area
+    }
+  };
+
   return (
     <div className="relative isolate bg-white sm:pt-6 px-6 pb-24 sm:pb-24 lg:px-8">
       {/* Background blob */}
@@ -41,7 +161,7 @@ export default function OurGoal() {
           your free time.
         </p>
 
-        {/* Balls legend */}
+        {/* Balls legend - This is still relevant for the balls visualization */}
         <div className="mt-6 flex flex-col xs:flex-row items-center gap-4 xs:gap-6 text-base font-medium justify-center">
           <div className="flex items-center gap-2">
             <span className="inline-block w-6 h-6 rounded-full border-2 border-[#073b3a] shadow bg-white"></span>
@@ -65,7 +185,7 @@ export default function OurGoal() {
                   <span
                     key={row}
                     className={
-                      idx < 71
+                      idx < 71 
                         ? "inline-block w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-[#073b3a] bg-white"
                         : "inline-block w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#a3d9a5] border-2 border-[#073b3a] shadow"
                     }
@@ -76,8 +196,21 @@ export default function OurGoal() {
             </div>
           ))}
         </div>
+
+        {/* Pie Chart Section */}
+        <div className="mt-16 text-center"> {/* Increased top margin */}
+            {/* Title is now part of the chart options, so you might not need this h3 unless it's for sectioning */}
+            {/* <h3 className="text-2xl font-semibold text-[#073b3a] mb-6">
+                Visualizing Your Free Time
+            </h3> */}
+            <div className="relative mx-auto w-full max-w-lg h-[28rem] sm:h-[32rem]"> {/* Adjusted max-w and height slightly */}
+                <Pie data={pieChartData} options={pieChartOptions} />
+            </div>
+        </div>
+
+
         {/* Inspiration section */}
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center"> {/* Adjusted margin */}
           <p className="text-xl font-semibold text-[#1a9959] mb-2">
             Imagine what you could do with that time...
           </p>
